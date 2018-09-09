@@ -1,6 +1,4 @@
-#!/usr/bin/python3
-
-import random, requests, json
+import random, json, re
 
 app_id = '96d58ebb'
 app_key = '0dd1b3c11be7595c17e5dba593dbf36c'
@@ -17,7 +15,13 @@ print(req.text)
 print("Here's the domain list\n")
 print(json.dumps(domains.json()))
 
+get_quote = requests.get('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&').json()
 
+def cleanhtml(raw_html):
+  cleanr = re.compile('<.*?>|\n')
+  cleantext = re.sub(cleanr, '', raw_html)
+  return cleantext
+
+new_reason = cleanhtml(new_reason[0]['content'])
 
 # def new_word():
-    

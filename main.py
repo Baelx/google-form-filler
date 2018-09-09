@@ -1,10 +1,10 @@
-import requests
+import requests, daynamesources
 
 url = 'https://docs.google.com/forms/d/e/1FAIpQLScC1fY4nkNKuX8co7ivxEoT0XGX4Yz_T5UIrTruvOk7Aqa8MA/formResponse'
 
 payload = {'entry.895362114':'Plowman',
-           'entry.346635073':'One more time',
-           'entry.49460226':'Another one',
+           'entry.346635073':'RESPONSEO',
+           'entry.49460226':'Another dope mane',
            'draftResponse':[],
            'pageHistory':0}
 
