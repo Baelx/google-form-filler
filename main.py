@@ -1,10 +1,12 @@
 import requests, daynamesources
 
+state_identity = 'Plowman'
+
 url = 'https://docs.google.com/forms/d/e/1FAIpQLScC1fY4nkNKuX8co7ivxEoT0XGX4Yz_T5UIrTruvOk7Aqa8MA/formResponse'
 
-payload = {'entry.895362114':'Plowman',
-           'entry.346635073':'RESPONSEO',
-           'entry.49460226':'Another dope mane',
+payload = {'entry.895362114': state_identity,
+           'entry.346635073': day(),
+           'entry.49460226': because(),
            'draftResponse':[],
            'pageHistory':0}
 
